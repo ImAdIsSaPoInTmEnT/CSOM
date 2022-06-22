@@ -24,11 +24,11 @@ function onCycleHold()
 		onLower();
 	end;
 end;
-local l__ToggleSuppressorEvent__5 = script.Parent:WaitForChild("ToggleSuppressorEvent");
+local l__ToggleSuppressorEvent__5 = GunModel:WaitForChild("ToggleSuppressorEvent");
 function onToggleSuppressor()
 	l__ToggleSuppressorEvent__5:FireServer();
 end;
-local l__Parent__6 = script.Parent;
+local l__Parent__6 = GunModel;
 function onLower()
 	local v1 = l__Parent__6.Parent:FindFirstChildWhichIsA("Humanoid");
 	local v2 = Instance.new("Animation");
@@ -77,6 +77,6 @@ function onUnequipped()
 	holdAnimTrack = nil;
 end;
 local u8 = false;
-local l__ShootEvent__9 = script.Parent:WaitForChild("ShootEvent");
-script.Parent.Equipped:connect(onEquipped);
-script.Parent.Unequipped:connect(onUnequipped);
+local l__ShootEvent__9 = GunModel:WaitForChild("ShootEvent");
+GunModel.Equipped:connect(onEquipped);
+GunModel.Unequipped:connect(onUnequipped);
