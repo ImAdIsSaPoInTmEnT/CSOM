@@ -7,6 +7,12 @@ local u1 = { "rbxassetid://2085074428", "rbxassetid://2055028123" };
 local u2 = 1;
 local u3 = { "rbxassetid://2055105211", "rbxassetid://5763254152" };
 local u4 = 1;
+local GunModel
+if game.Players.LocalPlayer.Backpack:FindFirstChild('MP5A3') then
+	GunModel = game.Players.LocalPlayer.Backpack['MP5A3']
+else
+	GunModel = game.Players.LocalPlayer.Character['MP5A3']
+end
 function onCycleHold()
 	if not lowered then
 		if 1 < #u1 then
